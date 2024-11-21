@@ -59,11 +59,11 @@ app.get('/signup', (reequest, response) => {
 })
 
 app.get('/blogs', (request, response) => {
-    response.render('Blogs')
+    response.render('blogs')
 })
 
 app.get('/contact', (request, response) => {
-    response.render('Contact')
+    response.render('contact')
 })
 
 app.get('/AboutUs', (request, response) => {
@@ -71,7 +71,7 @@ app.get('/AboutUs', (request, response) => {
 })
 
 app.get('/schools', (request, response) => {
-    response.render('Schools')
+    response.render('schools')
 })
 
 app.get('/admin', (request, response) => {
