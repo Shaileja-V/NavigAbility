@@ -4,11 +4,6 @@ const { createUserWithEmailAndPassword, signInWithEmailAndPassword } = require( 
 // const { ,  }  = require( "firebase/firestore");
 const { collection, addDoc, getDocs, getFirestore,doc, deleteDoc,setDoc,getDoc  } = require( "firebase/firestore"); 
 
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyAMh9rDz2apz7sa7ySZDEU_V4hKrD8bPmI",
   authDomain: "navigability-ab8a9.firebaseapp.com",
