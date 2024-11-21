@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', sans-serif;
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
+header {
+    height: 100vh;
+    box-shadow: 0 0 30px rgba(0, 7, 45, 1);
+    background-color: #00072D;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    /* Stack items vertically */
+    align-items: center;
+    /* position: absolute; */
+}
+
+main {
+    height: 100vh;
+    /* background-color: red; */
+    overflow-y: scroll;
+    /* padding-right: auto; */
+    padding: 0 20px;
+}
+
+/* Logo Section */
+.logo img {
+    height: 200px;
+    /* Adjust height if needed */
+    width: 100%;
+    margin-bottom: 20px;
+    /* Space between logo and nav links */
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    /* Stack links vertically */
+    width: 100%;
+    /* Align to navbar width */
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    /* margin-left: 20px; */
+    text-align: center;
+    padding: 20px;
+}
+
+.nav-links a {
+    position: relative;
+    display: block;
+    padding: 4px 0;
+    font: 700 2rem Raleway, sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px #198CE6;
+    background: linear-gradient(#198CE6 0 100%) left / 0 no-repeat;
+    color: transparent;
+    background-clip: text;
+    transition: 0.5s linear;
+
+    &:hover {
+        background-size: 100%;
+    }
+}
+
+.nav-links a:hover {
+    background-color: #6a11cb;
+    border-radius: 5px;
+}
+
+.nav-links a.active {
+    background-color: #6a11cb;
+    background-size: 100%;
+
+}
+
+
+.heading {
+    text-align: center;
+    margin-top: 0px;
+    padding: 10px;
+
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.heading h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    /*color: #2575fc;*/
+    color: #00072D;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+
+    opacity: 0;
+    /* Start invisible */
+    animation: fadeInUp 1s ease-out forwards;
+    /* Apply animation */
+}
+
+.heading p {
+    font-size: 2.5em;
+    /*color: #6a11cb;*/
+    color: #00072D;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+
+    opacity: 0;
+    /* Start invisible */
+    animation: fadeInUp 1.2s ease-out forwards;
+    /* Apply animation with delay */
+    animation-delay: 0.3s;
+    /* Delay to create a staggered effect */
+}
+
+
+/* Main Banner Styles */
+.main-banner {
+    background: center no-repeat;
+    height: auto;
+    width: 100%;
+    align-items: right;
+    /* padding: 20px; */
+    margin-top: 35px;
+    opacity: 0;
+    /* Start invisible */
+    animation: fadeInUp 1s ease-out forwards;
+    /* Apply animation */
+
+}
+
+
+section {
+    text-align: center;
+}
+
+section .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.card {
+    display: inline-block;
+    width: 100%;
+    /* margin: 10px; */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 7, 45, 1);
+}
+
+.card-imageg {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+section h2 {
+    margin: 20px 0;
+    font-size: 40px;
+    color: #00072D;
+    animation: fadeInUp 1.2s;
+    /* Apply animation */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+section:last-of-type{
+    margin-bottom: 50px;
+}
+
+/* footer */
+footer {
+    background-color: #00072D; 
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.school-image {
+    width: 200px;
+    height: 150px !important;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+
+.map-link {
+    display: inline-block;
+    color: #2575fc;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.map-link:hover {
+    color: #6a11cb;
+}
+
+/* BLOGS */
+
+
+.categories {
+    margin: 20px 0;
+    font-size: 20px;
+}
+
+.categories a {
+    text-decoration: underline;
+    color: #00072D;
+}
+
+
+@media screen and (max-width: 414px) {
+    body {
+        grid-template-columns: 25% 75%;
+
+    }
+
+    .logo img {
+        margin-top: 10px;
+        height: 100px;
+    }
+
+    .nav-links a {
+        font-size: 15px;
+    }
+
+    .heading h1{
+        font-size: 25px;
+    }
+
+    .heading p{
+        font-size: 20px;
+    }
+    .card {
+        font-size: 15px;
+    }
+    section h2{
+        font-size: 25px;
+    }
+}

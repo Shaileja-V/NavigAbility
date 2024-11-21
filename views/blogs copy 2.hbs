@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NavigAbility- Blogs</title>
+    <link rel="stylesheet" href="css/blogs.css">
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/logo.jpg" alt="Website Logo" id="logo-img">
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/schools">Schools</a></li>
+                <li><a class="active" href="/blogs">Blogs</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/AboutUs">About</a></li>
+                <li id="login"><a href="/LogIn">Log In</a></li>
+                <li id="logout"><a href="/logout">Logout</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <section class="blogs-section">
+        <h1>Blogs</h1>
+        <div class="categories">
+            <span>Categories:</span>
+            <a href="#diet">Diet</a> |
+            <a href="#exercises">Exercises</a> |
+            <a href="#products">Products</a> |
+            <a href="#mental-health">Mental Health</a>
+        </div>
+        <div class="categories">
+            <a href="/add-blogs">Add your own blog</a>
+        </div>
+        {{!-- <br></br> --}}
+
+        <section class="recent-blogs" id="diet">
+            
+            {{!-- <h2>Diets Blogs</h2>
+            <hr>
+            <div class="blog-card">
+                <h3>Eating Healthy When You Have Disabilities</h3>
+                <p>A balanced, nourishing diet can be life-changing, particularly for people with disabilities. By
+                    focusing
+                    on accessible, nutrient-dense foods and seeking tailored guidance, you can take control of your
+                    nutrition to enhance your overall health and well-being. Remember, small changes can make a big
+                    difference—start with a few of these tips and see how they benefit you.</p>
+                <a href="/blogs" class="read-more">Read More</a>
+            </div>
+            <hr>
+            <div class="blog-card">
+                <h3>Exercise Tips for People with Disabilities</h3>
+                <p>Exercise is a powerful tool for promoting health, regardless of physical limitations. By finding
+                    adaptive
+                    exercises that suit your abilities, you can build strength, improve flexibility, and enjoy a greater
+                    sense of well-being. Start with a few of these tips, and remember that consistency is key—small
+                    steps
+                    can lead to big improvements over time.</p>
+                <a href="/blogs" class="read-more">Read More</a>
+            </div>
+            <hr>
+            <div class="blog-card">
+                <h3>Mental Health Tips for People with Special Needs</h3>
+                <p>Mental health is essential to overall well-being, especially for people with special needs. Managing
+                    stress, building resilience, and fostering a positive mindset can lead to a happier and more
+                    fulfilling
+                    life. </p>
+                <a href="/blogs" class="read-more">Read More</a>
+            </div> --}}
+        </section>
+
+
+        <section class="recent-blogs" id="exercises">
+            {{!-- <h2>Exercises Blogs</h2>
+            <hr>
+            <div class="blog-card">
+                <h3>Mental Health Tips for People with Special Needs</h3>
+                <p>Mental health is essential to overall well-being, especially for people with special needs. Managing
+                    stress, building resilience, and fostering a positive mindset can lead to a happier and more
+                    fulfilling
+                    life. </p>
+                <p><strong>Author:</strong> Abdel Karim</p>
+            </div> --}}
+        </section>
+
+
+        <section class="recent-blogs" id="products">
+            {{!-- <h2>Exercises Blogs</h2>
+            <hr>
+            <div class="blog-card">
+                <h3>Mental Health Tips for People with Special Needs</h3>
+                <p>Mental health is essential to overall well-being, especially for people with special needs. Managing
+                    stress, building resilience, and fostering a positive mindset can lead to a happier and more
+                    fulfilling
+                    life. </p>
+                <p><strong>Author:</strong> Abdel Karim</p>
+            </div> --}}
+        </section>
+
+
+        <section class="recent-blogs" id="mental-health">
+            {{!-- <h2>Exercises Blogs</h2>
+            <hr>
+            <div class="blog-card">
+                <h3>Mental Health Tips for People with Special Needs</h3>
+                <p>Mental health is essential to overall well-being, especially for people with special needs. Managing
+                    stress, building resilience, and fostering a positive mindset can lead to a happier and more
+                    fulfilling
+                    life. </p>
+                <p><strong>Author:</strong> Abdel Karim</p>
+            </div> --}}
+        </section>
+    </section>
+
+    <!-- Chatbot -->
+    <div class="chatbot">
+        <button id="chatbot-toggle">Chat with Us</button>
+        <div class="chatbot-window">
+            <div class="chatbot-messages">
+                <!-- Messages will appear here -->
+            </div>
+            <div class="chatbot-options">
+                <!-- Question options will appear here -->
+            </div>
+            <form id="chat">
+                <input type="text" id="chat-input" placeholder="Type your message...">
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="call-to-action">
+        <p>&copy; 2024 - Shaileja Kumari Vaghela</p>
+    </footer>
+
+    <script src="js/functions.js"></script>
+    <script src="js/chatbot.js"></script>
+</body>
+
+</html>

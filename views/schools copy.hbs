@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NavigAbility- Schools</title>
+    <link rel="stylesheet" href="css/schools.css">
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
+    {{!-- <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script> --}}
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/logo.jpg" alt="Website Logo" id="logo-img">
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a class="active" href="/schools">Schools</a></li>
+                <li><a href="/blogs">Blogs</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/AboutUs">About</a></li>
+                <li id="login"><a href="/LogIn">Log In</a></li>
+                <li id="logout"><a href="/logout">Logout</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <section class="schools-section">
+        <h1>Schools </h1>
+        <div class="school-card">
+            <img src="images/school1.jpg" alt="School Image" class="school-image">
+            <div class="school-info">
+                <h2>School Name</h2>
+                <p class="location">Location: City, Country</p>
+                <p class="contacts">
+                    <strong>Contact:</strong><br>
+                    Phone: (123) 456-7890 <br>
+                    Email: info@schoolname.com <br>
+                    <a href="https://facebook.com/schoolname" target="_blank">Facebook</a>
+                </p>
+                <p class="services">
+                    <strong>Services Offered:</strong> This school specializes in providing tailored education programs
+                    for students with disabilities, including sensory integration, therapy sessions, and personalized
+                    learning plans.
+                </p>
+                <a href="https://www.google.com/maps/dir/?api=1&destination=School+Location" target="_blank"
+                    class="map-link">Get Directions on Google Maps</a>
+            </div>
+        </div>
+
+        <div class="school-card">
+            <img src="images/school1.jpg" alt="School Image" class="school-image">
+            <div class="school-info">
+                <h2>School Name</h2>
+                <p class="location">Location: City, Country</p>
+                <p class="contacts">
+                    <strong>Contact:</strong><br>
+                    Phone: (123) 456-7890 <br>
+                    Email: info@schoolname.com <br>
+                    <a href="https://facebook.com/schoolname" target="_blank">Facebook</a>
+                </p>
+                <p class="services">
+                    <strong>Services Offered:</strong> This school specializes in providing tailored education programs
+                    for students with disabilities, including sensory integration, therapy sessions, and personalized
+                    learning plans.
+                </p>
+                <a href="https://www.google.com/maps/dir/?api=1&destination=School+Location" target="_blank"
+                    class="map-link">Get Directions on Google Maps</a>
+            </div>
+        </div>
+
+        <div class="school-card">
+            <img src="images/school1.jpg" alt="School Image" class="school-image">
+            <div class="school-info">
+                <h2>School Name</h2>
+                <p class="location">Location: City, Country</p>
+                <p class="contacts">
+                    <strong>Contact:</strong><br>
+                    Phone: (123) 456-7890 <br>
+                    Email: info@schoolname.com <br>
+                    <a href="https://facebook.com/schoolname" target="_blank">Facebook</a>
+                </p>
+                <p class="services">
+                    <strong>Services Offered:</strong> This school specializes in providing tailored education programs
+                    for students with disabilities, including sensory integration, therapy sessions, and personalized
+                    learning plans.
+                </p>
+                <a href="https://www.google.com/maps/dir/?api=1&destination=School+Location" target="_blank"
+                    class="map-link">Get Directions on Google Maps</a>
+            </div>
+        </div>
+
+        <!-- Additional school cards can be added similarly -->
+
+
+    </section>
+
+    <section class="schools-section">
+        <h1>Schools</h1>
+
+        <!-- Toggle button for Add School Form -->
+        <button class="toggle-form-btn" onclick="toggleForm()">Add School</button>
+
+        <!-- Add School Form -->
+        <form id="add-school-form" class="add-school-form" onsubmit="addSchool(event)">
+            <label for="school-name">School Name:</label>
+            <input type="text" id="school-name" required>
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="website">Website (optional):</label>
+            <input type="url" id="website">
+
+            <label for="services">Services Offered:</label>
+            <textarea id="services" required></textarea>
+
+            <button type="submit" class="submit-btn">Add School</button>
+        </form>
+
+        <!-- Existing School Cards -->
+        <div id="school-cards-container">
+            <!-- Existing static school cards here -->
+        </div>
+    </section>
+
+    <!-- Modal for User's details -->
+    <div class="modal fade" id="modify_profile" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modify password</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <form class="float-label" id="editModal">
+
+                        <div class="form-group">
+                            <input type="text" id="username_form" name="username_form" class="input-field">
+                            <label for="username_form" class="float-label">Username:</label>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" id="full_name_form" name="full_name_form" class="input-field">
+                            <label for="full_name_form" class="float-label">Full Name:</label>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" id="bio_form" name="bio_form" class="input-field">
+                            <label for="bio_form" class="float-label">Bio:</label>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" id="email_form" name="email_form" class="input-field">
+                            <label for="email_form" class="float-label">Email:</label>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" id="phone_form" name="phone_form" class="input-field">
+                            <label for="phone_form" class="float-label">Phone Number:</label>
+                        </div>
+                        <input class="btn btn-outline-dark ms-2" type="submit" value="Edit Details"></input>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-dark ms-2" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{!-- End of the modal --}}
+
+    <footer class="call-to-action">
+        <p>&copy; 2024 - Shaileja Kumari Vaghela</p>
+    </footer>
+
+    <script src="js/functions.js"></script>
+    <script src="js/schools.js"></script>
+</body>
+
+</html>

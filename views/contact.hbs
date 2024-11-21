@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
+    <title>NavigAbility | Contact</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.jpg" alt="Website Logo" id="logo-img">
+        </div>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/schools">Schools</a></li>
+            <li><a href="/blogs">Blogs</a></li>
+            <li><a class="active" href="/contact">Contact</a></li>
+            <li><a href="/AboutUs">About</a></li>
+            <li id="login"><a href="/LogIn">Log In</a></li>
+            <li id="logout"><a href="/logout">Logout</a></li>
+        </ul>
+    </header>
+    <main>
+
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p1>We're here to help! If you have any questions or need
+                assistance, feel free to reach out to our support
+                team through the methods below.</p1>
+
+            <div class="contact-details">
+                <div class="contact-method">
+                    <h2>Email</h2>
+                    <p>support@navigability.com</p>
+                </div>
+                <div class="contact-method">
+                    <h2>Phone</h2>
+                    <p>+254 7341234567</p>
+                </div>
+                <div class="contact-method">
+                    <h2>Address</h2>
+                    <p>United States International University - Africa USIU
+                        Road, Off Thika Road (Exit 7), P. O. Box
+                        14634 - 00800, Nairobi, Kenya, East Africa.</p>
+                </div>
+            </div>
+
+            <h2>Contact Form</h2>
+            <form class="contact-form" id="contact-form">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="Enter the subject of the email" required>
+
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="6" placeholder="Enter your message here"
+                    required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 - Shaileja Kumari Vaghela</p>
+    </footer>
+
+    <script src="js/contact.js"></script>
+    <script src="js/functions.js"></script>
+
+</body>
+
+</html>

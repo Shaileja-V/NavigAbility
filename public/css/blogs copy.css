@@ -1,0 +1,413 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: auto;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
+
+/* Navigation Bar Styles */
+.navbar {
+    background-color: #00072D;
+    display: flex;
+    flex-direction: column;
+    /* Stack items vertically */
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 0 30px rgba(0, 7, 45, 1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    /* Full height of the page */
+    width: 250px;
+    /* Adjust the width as needed */
+    z-index: 1000;
+}
+
+/* Logo Section */
+.logo img {
+    height: 200px;
+    /* Adjust height if needed */
+    width: 250px;
+    margin-bottom: 20px;
+    /* Space between logo and nav links */
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    /* Stack links vertically */
+    width: 100%;
+    /* Align to navbar width */
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    margin-left: 20px;
+    padding: 20px;
+}
+
+.nav-links a {
+    --fill-color: #198CE6;
+    position: relative;
+    display: block;
+    padding: 4px 0;
+    font: 700 2rem Raleway, sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    -webkit-text-stroke: 2px var(--fill-color);
+    background: linear-gradient(var(--fill-color) 0 100%) left / 0 no-repeat;
+    color: transparent;
+    background-clip: text;
+    transition: 0.5s linear;
+
+    &:hover {
+        background-size: 100%;
+    }
+}
+
+.nav-links a:hover {
+    background-color: #6a11cb;
+    border-radius: 5px;
+}
+
+.nav-links a.active {
+    background-color: #6a11cb;
+    background-size: 100%;
+
+}
+
+/* Call to Action Styles */
+.call-to-action {
+    background-color: #00072D;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+
+.blogs-section {
+    padding: 0px;
+    text-align: center;
+    color: #00072D;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.blogs-section h1 {
+    color: #00072D;
+    font-size: 40px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    /* Start invisible */
+    animation: fadeInUp 1s ease-out forwards;
+    /* Apply animation */
+}
+
+/*.search-bar {
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+} 
+
+.search-bar input {
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background-color: #2575fc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}*/
+
+.categories {
+    margin: 20px 0;
+    font-size: 20px;
+}
+
+.categories a {
+    text-decoration: underline;
+    color: #00072D;
+}
+
+.blog-feed {
+    display: flex;
+    box-shadow: 0 0 30px rgba(0, 7, 45, 1);
+    border-radius: 10px;
+    /*flex-direction: column;*/
+    flex-wrap: wrap;
+    /* Ensures that items wrap to the next line */
+    justify-content: center;
+    /* Centers the blog posts */
+    gap: 20px;
+    /* Adds space between blog posts */
+    margin-bottom: 30px;
+}
+
+.blog-post {
+    background-color: #fff;
+    color: #333;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    line-height: 1.8;
+    /* Increased line-height for more space between lines */
+    width: calc(80% - 20px);
+    /* Ensures two blog posts fit in one row */
+    height: fit-content;
+    margin: 10px 0;
+    /* Adjusted margin to fit in the wrapping layout */
+
+}
+
+.blog-post h2 {
+    font-size: 28px;
+    color: #00072D;
+    margin-bottom: 15px;
+}
+
+.blog-post .author {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.blog-post .summary {
+    font-size: 16px;
+    margin-bottom: 20px;
+    align-content: space-around;
+}
+
+.blog-post .read-more {
+    color: #6a11cb;
+    text-decoration: none;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.comments {
+    margin-top: 30px;
+
+}
+
+.comments-button:hover {
+    background-color: #6a11cb;
+}
+
+.comments textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.comments button {
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #00072D;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Chatbot Styles */
+.chatbot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    font-family: 'Georgia', sans-serif;
+    margin-bottom: 30px;
+}
+
+#chatbot-toggle {
+    background-color: #00072D;
+    color: white;
+    font-size: 30px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    width: 100%;
+    text-align: center;
+}
+
+.chatbot-window {
+    display: block;
+    /* Make chatbot window visible by default */
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 7, 45, 1);
+    padding: 20px;
+    max-height: 700px;
+    overflow-y: auto;
+}
+
+.chatbot-messages {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+
+}
+
+.chatbot-messages p {
+    margin: 10px 0;
+    padding: 8px 12px;
+    border-radius: 10px;
+    max-width: 80%;
+}
+
+.chatbot-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Chatbot message styles */
+.chatbot-messages .chatbot-response {
+    background-color: #e6f0ff;
+    font-family: 'Arial', sans-serif;
+    font-style: italic;
+    color: #333;
+    text-align: left;
+    margin-right: auto;
+}
+
+/* User message styles */
+.chatbot-messages .user-response {
+    background-color: #d1e7ff;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    color: #003366;
+    text-align: right;
+    margin-left: auto;
+}
+
+.question-button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #00072D;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.3s ease;
+}
+
+.question-button:hover {
+    background-color: #6a11cb;
+}
+
+
+
+.contact-form {
+    margin-top: 30px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    font-size: 16px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #2575fc;
+    background-color: #e0f0ff;
+    outline: none;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #00072D;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #6a11cb;
+}
+
+/* Recent Blogs Styles */
+.recent-blogs {
+    padding: 20px;
+    text-align: center;
+    color: #00072D;
+    margin-bottom: 30px;
+}
+
+.recent-blogs h2{
+    margin-bottom: 20px;
+    font-size: 40px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.blog-card {
+    font-size: 20px;
+    line-height: 1.5;
+    display: inline-block;
+    width: 50%;
+    height: fit-content;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 7, 45, 1);
+    margin: 10px;
+}

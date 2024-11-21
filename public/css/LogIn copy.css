@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', sans-serif;
+    /*background: linear-gradient(to right, #6912c5, #8fb1ec);*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 7, 45, 1);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 28px;
+}
+
+.login-form p {
+    margin-bottom: 20px;
+    color: #666;
+    font-size: 14px;
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+    color: #333;
+    font-weight: bold;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.login-form input:focus {
+    border-color: #2575fc;
+    background-color: #e0f0ff;
+    outline: none;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #00072D;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+    background-color: #6a11cb;
+}
+
+.login-form a {
+    color: #2575fc;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.login-form a:hover {
+    text-decoration: underline;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', sans-serif;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
+
+/* Navigation Bar Styles */
+.navbar {
+    background-color: #00072D;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 0 30px rgba(0, 7, 45, 1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%; /* Full height of the page */
+    width: 250px; /* Adjust the width as needed */
+    z-index: 1000;
+}
+
+/* Logo Section */
+.logo img {
+    height: 200px; /* Adjust height if needed */
+    width: 250px;
+    margin-bottom: 20px; /* Space between logo and nav links */
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column; /* Stack links vertically */
+    width: 100%; /* Align to navbar width */
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    margin-left: 20px;
+    padding: 20px;
+}
+
+.nav-links a {
+    --fill-color: #198CE6;
+      position: relative;
+      display: block;
+      padding: 4px 0;
+      font: 700 2rem Raleway, sans-serif;
+      text-decoration: none;
+      text-transform: uppercase;
+      -webkit-text-stroke: 2px var(--fill-color);
+      background: linear-gradient(var(--fill-color) 0 100%) left / 0 no-repeat;
+      color: transparent;
+      background-clip: text;
+      transition: 0.5s linear;
+
+      &:hover {
+        background-size: 100%;}
+}
+
+.nav-links a:hover {
+    background-color: #6a11cb;
+    border-radius: 5px;
+}
+.nav-links a.active{
+    background-color: #6a11cb;
+    background-size: 100%;
+
+}
+
+/* Call to Action Styles */
+.call-to-action {
+    background-color: #00072D; 
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+}

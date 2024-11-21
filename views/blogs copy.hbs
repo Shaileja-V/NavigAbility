@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NavigAbility- Blogs</title>
+    <link rel="stylesheet" href="css/blogs.css">
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/logo.jpg" alt="Website Logo" id="logo-img">
+        </div>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/schools">Schools</a></li>
+            <li><a class="active" href="/blogs">Blogs</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/AboutUs">About</a></li>
+            <li id="login"><a href="/LogIn">Log In</a></li>
+            <li id="logout"><a href="/logout">Logout</a></li>
+
+        </ul>
+    </nav>
+</header>
+
+    <section class="blogs-section">
+        <h1>Blogs</h1>
+        <!-- <div class="search-bar">
+            <input type="text" placeholder="Search blogs..." id="blog-search">
+            <button type="button">Search</button>
+        </div> -->
+        <div class="categories">
+            <span>Categories:</span>
+            <a href="#diet">Diet</a> | 
+            <a href="#exercises">Exercises</a> | 
+            <a href="#products">Products</a> | 
+            <a href="#mental-health">Mental Health</a>
+        </div>
+        <br></br>
+
+        <div class="blog-feed">
+            <div class="blog-post" id="blog1">
+                <h2>Title of Blog Post 1</h2>
+                <p class="author">by Author Name - Date</p>
+                <p class="summary">This is a short summary of the blog post. It provides an overview of the content...</p>
+                <a href="#" class="read-more">Read More</a>
+                <div class="comments">
+                    <h3>Comments</h3>
+                    <textarea placeholder="Leave a comment..."></textarea>
+                    <button type="button">Submit</button>
+                </div>
+            </div>
+            <!-- Repeat .blog-post for additional blog entries -->
+        </div>
+
+        <div class="blog-feed">
+            <div class="blog-post" id="blog1">
+                <h2>Title of Blog Post 2</h2>
+                <p class="author">by Author Name - Date</p>
+                <p class="summary">This is a short summary of the blog post. It provides an overview of the content...</p>
+                <a href="#" class="read-more">Read More</a>
+                <div class="comments">
+                    <h3>Comments</h3>
+                    <textarea placeholder="Leave a comment..."></textarea>
+                    <button type="button">Submit</button>
+                </div>
+            </div>
+            <!-- Repeat .blog-post for additional blog entries -->
+        </div>
+
+        <div class="blog-feed" id="diet">
+            <div class="blog-post" id="blog1">
+                <h2>Title of Blog Post 3</h2>
+                <p class="author">by Author Name - Date</p>
+                <p class="summary">This is a short summary of the blog post. It provides an overview of the content...</p>
+                <a href="#" class="read-more">Read More</a>
+                <div class="comments">
+                    <h3>Comments</h3>
+                    <textarea placeholder="Leave a comment..."></textarea>
+                    <button type="button">Submit</button>
+                </div>
+            </div>
+            <!-- Repeat .blog-post for additional blog entries -->
+        </div>
+    </section>
+
+    <!-- Chatbot -->
+    <div class="chatbot">
+        <button id="chatbot-toggle">Chat with Us</button>
+        <div class="chatbot-window">
+            <div class="chatbot-messages">
+                <!-- Messages will appear here -->  
+            </div>
+            <div class="chatbot-options">
+                <!-- Question options will appear here -->
+            </div>
+            <form id="chat">
+                <input type="text" id="chat-input" placeholder="Type your message...">
+                <button type="submit">Send</button>
+            </form>
+    </div>
+
+    <footer class="call-to-action">
+        <p>&copy; 2024 - Shaileja Kumari Vaghela</p>
+    </footer>
+
+    <script src="js/functions.js"></script>
+    <script src="js/chatbot.js"></script>
+</body>
+</html>

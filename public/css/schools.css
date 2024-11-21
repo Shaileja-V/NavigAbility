@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', sans-serif;
+    margin-top: 10px;
+    /*background: linear-gradient(to top right, #100152, #ebb0fd);*/
+}
+
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
+
+/* Navigation Bar Styles */
+.navbar {
+    background-color: #00072D;
+    display: flex;
+    flex-direction: column;
+    /* Stack items vertically */
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 0 30px rgba(0, 7, 45, 1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    /* Full height of the page */
+    width: 250px;
+    /* Adjust the width as needed */
+    z-index: 1000;
+}
+
+/* Logo Section */
+.logo img {
+    height: 200px !important;
+    /* Adjust height if needed */
+    width: 250px !important;
+    margin-bottom: 20px !important;
+    /* Space between logo and nav links */
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    /* Stack links vertically */
+    width: 100%;
+    /* Align to navbar width */
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    margin-left: 20px;
+    padding: 20px;
+}
+
+.nav-links a {
+    --fill-color: #198CE6;
+    position: relative;
+    display: block;
+    padding: 4px 0;
+    font: 700 2rem Raleway, sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    -webkit-text-stroke: 2px var(--fill-color);
+    background: linear-gradient(var(--fill-color) 0 100%) left / 0 no-repeat;
+    color: transparent;
+    background-clip: text;
+    transition: 0.5s linear;
+
+    &:hover {
+        background-size: 100%;
+    }
+}
+
+.nav-links a:hover {
+    background-color: #6a11cb;
+    border-radius: 5px;
+}
+
+.nav-links a.active {
+    background-color: #6a11cb;
+    background-size: 100%;
+
+}
+
+.nav-links a.active {
+    background-color: #6a11cb;
+    background-size: 100%;
+
+}
+
+/* Call to Action Styles */
+.call-to-action {
+    background-color: #00072D;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Schools Section */
+.schools-section {
+    /* margin-left: 400px; */
+    padding: 30px;
+    color: #00072D;
+    text-align: center;
+    max-width: 900px;
+    width: 100%;
+    line-height: 1.5;
+    display: grid;
+    grid-template-columns: auto auto ;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.schools-section h1 {
+    font-size: 40px;
+    color: #00072D;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    margin-bottom: 30px;
+    margin-left: 300px;
+    opacity: 0;
+    /* Start invisible */
+    animation: fadeInUp 1s ease-out forwards;
+    /* Apply animation */
+}
+
+.school-card {
+    display: flex;
+    align-items: flex-start;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 30px rgba(0, 7, 45, 1);
+    border-radius: 10px;
+    margin-bottom: 30px;
+    margin-left: 250px;
+    padding: 20px;
+    gap: 20px;
+}
+
+.school-image {
+    width: 200px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.school-info {
+    text-align: left;
+    color: #333;
+}
+
+.school-info h2 {
+    color: #00072D;
+    margin-bottom: 10px;
+}
+
+.school-info p {
+    margin: 10px 0;
+}
+
+.map-link {
+    display: inline-block;
+    color: #2575fc;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.map-link:hover {
+    color: #6a11cb;
+}
+
+
+/* Add School Form and Button */
+.toggle-form-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #2575fc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.toggle-form-btn:hover {
+    background-color: #6a11cb;
+}
+
+.add-school-form {
+    display: none;
+    /* Hidden by default, shown on button click */
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 20px rgba(0, 7, 45, 0.5);
+    border-radius: 10px;
+    max-width: 600px;
+}
+
+.add-school-form label {
+    font-weight: bold;
+    color: #00072D;
+}
+
+.add-school-form input,
+.add-school-form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 14px;
+}
+
+.submit-btn {
+    background-color: #2575fc;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #6a11cb;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
