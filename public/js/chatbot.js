@@ -94,10 +94,6 @@ document.getElementById('chat').addEventListener('submit', async e => {
 const blogCategories = ['diet', 'exercises', 'products', 'mental-health'];
 
 blogCategories.forEach(async category => {
-    // const option = document.createElement('option');
-    // option.value = category;
-    // option.textContent = category;
-    // document.getElementById('category').appendChild(option);
 
     const response = await fetch('/get-blogs/' + category);
 
@@ -109,8 +105,9 @@ blogCategories.forEach(async category => {
 
 
 function populateCategory(category, blogs) {
+    console.log(category)
     const categoryContainer = document.getElementById(category.toLowerCase());
-    // categoryContainer.innerHTML = `<h2>${category.charAt(0).toUpperCase() + category.slice(1)} Blogs</h2>`;
+    console.error(categoryContainer)
     blogs.forEach(blog => {
         categoryContainer.innerHTML += `
             <div class="card">

@@ -116,13 +116,15 @@ app.post('/signup', (request, response) => {
             // Signed up 
             const user = userCredential.user;
             const id = user.uid;
+            console.log(id)
+            console.log("********************************")
             // const docRef = await addDoc(collection(db, "users"), {
             //     email: email,
             //     role: role,
             //     name: name,
             //     id: id
             // });
-            const docRef = await setDoc(doc(db, "users", id), {
+            await setDoc(doc(db, "users", id), {
                 email: email,
                 role: "parent",
                 name: name
@@ -207,6 +209,9 @@ app.post('/chatbot', (request, response) => {
 app.post('/add-blog', async (request, response) => {
     const { title, category, message } = request.body;
     const { uid } = request.session.user;
+
+    console.log( await getUserName(uid) )
+
     try {
         // await setDoc(doc(db, "blogs", category), {
         //     title: title,
@@ -235,8 +240,6 @@ async function getUserName(id) {
 
     const docRef = doc(db, "users", id);
     const docSnap = await getDoc(docRef);
-    // const docRef = doc(db, "users", id);
-    // const docSnap = getDoc(docRef);
     if (docSnap.exists()) {
         return docSnap.data().name;
     }
