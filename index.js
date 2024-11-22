@@ -90,7 +90,7 @@ app.post('/login', (request, response) => {
         response.cookie('user', 'admin');
         return response.status(200).json({ redirect: '/admin', success: true, message: 'Admin signed in successfully' });
     }
-    console.log(email, password)
+    // console.log(email, password)
     signInWithEmailAndPassword(auth, email, password)
         .then(async (userCredential) => {
             // Signed in
@@ -276,7 +276,7 @@ app.post('/contact', async (request, response) => {
 })
 
 app.get('/admin-blogs', (request, response) => {
-    response.render('Admin Blogs')
+    response.render('admin blogs')
 })
 
 app.delete('/delete-blog/:category/:id', async (request, response) => {

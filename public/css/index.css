@@ -189,13 +189,13 @@ section h2 {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-section:last-of-type{
+section:last-of-type {
     margin-bottom: 50px;
 }
 
 /* footer */
 footer {
-    background-color: #00072D; 
+    background-color: #00072D;
     color: white;
     text-align: center;
     padding: 10px;
@@ -255,17 +255,26 @@ footer {
         font-size: 15px;
     }
 
-    .heading h1{
+    .heading h1 {
         font-size: 25px;
     }
 
-    .heading p{
+    .heading p {
         font-size: 20px;
     }
+
     .card {
         font-size: 15px;
     }
-    section h2{
+
+    section h2 {
         font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    
+    section .cards {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
 }
