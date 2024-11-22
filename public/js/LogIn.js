@@ -11,9 +11,12 @@ document.getElementById('login-form').addEventListener('submit', async e=>{
         body: JSON.stringify({email,password})
     })
     const data = await response.json();
-    alert(data.message);
     if(data.success){
+        showToast(data.message,'success');
         window.location.href = data.redirect;
+    }
+    else{
+        showToast(data.message,'error');
     }
 
 })

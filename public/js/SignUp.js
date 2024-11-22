@@ -4,22 +4,21 @@ document.getElementById('signup-form').addEventListener('submit', async e=>{
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
     const confirmPassword = document.getElementById('confirm-password').value;
-    const role = document.getElementById('role').value;
 
-    console.log(name, email, password, role)
+    console.log(name, email, password)
 
-    if(!name || !email || !password || !confirmPassword || !role){
-        alert('Please fill in all the fields')
+    if(!name || !email || !password || !confirmPassword){
+        showToast('Please fill in all the fields','warning')
         return;
     }
 
     if(password != confirmPassword){
-        alert('Passwords are not the same');
+        showToast('Passwords are not the same','warning');
         return;
     }
 
     if(!verifyPassword(password)){
-        alert('Password is not strong enough')
+        showToast('Password is not strong enough','warning')
         return;
     }
 
@@ -28,12 +27,12 @@ document.getElementById('signup-form').addEventListener('submit', async e=>{
         headers:{
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({name,email,password,role})
+        body: JSON.stringify({name,email,password})
     })
 
 
     const data = await response.json();;
-    alert(data.message)
+    showToast(data.message,'info')
     if(data.success){
         window.location.href = '/login'
     }  

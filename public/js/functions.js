@@ -20,3 +20,17 @@ const getCookie = (cookie_name) => {
 
     }
 )()
+
+// Notifications
+
+function showToast(message,type) {
+    console.log(message,type)
+    var toast = document.getElementById("toast");
+    toast.className = "toast show";
+    toast.classList.add(type);
+    toast.querySelector('.toast-body').innerText = message;
+    setTimeout(function () {
+        toast.className = toast.className.replace("show", "");
+    }, 3000);
+}
+

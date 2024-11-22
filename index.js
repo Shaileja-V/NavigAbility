@@ -109,8 +109,8 @@ app.post('/login', (request, response) => {
 })
 
 app.post('/signup', (request, response) => {
-    const { name, email, password, role } = request.body;
-    console.log(name, email, password, role);
+    const { name, email, password } = request.body;
+    console.log(name, email, password);
     createUserWithEmailAndPassword(auth, email, password)
         .then(async (userCredential) => {
             // Signed up 
@@ -124,7 +124,7 @@ app.post('/signup', (request, response) => {
             // });
             const docRef = await setDoc(doc(db, "users", id), {
                 email: email,
-                role: role,
+                role: "parent",
                 name: name
             });
             return response.status(200).json({ message: 'User created successfully', success: true })
